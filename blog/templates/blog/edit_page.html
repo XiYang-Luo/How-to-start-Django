@@ -3,7 +3,7 @@
 		<title>Edit page</title>
 	</head>
 	<body>
-		<form action="{% url "blog:edit_action" %}" method="post">
+		<form action='{% url 'blog:edit_action' %}' method="post">
 			{% csrf_token %}
 			{% if article%}
 				<input type="hidden" name="article_id" value="{{article.id}}">
